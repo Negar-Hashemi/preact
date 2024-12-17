@@ -1563,7 +1563,8 @@ export namespace JSXInternal {
 		| '_top'
 		| (string & {});
 
-	interface PartialAnchorHTMLAttributes<T> extends HTMLAttributes<T> {
+	interface PartialAnchorHTMLAttributes<T extends EventTarget>
+		extends HTMLAttributes<T> {
 		download?: Signalish<any>;
 		hreflang?: Signalish<string | undefined>;
 		hrefLang?: Signalish<string | undefined>;
@@ -1609,7 +1610,8 @@ export namespace JSXInternal {
 	> &
 		AnchorAriaRoles;
 
-	interface PartialAreaHTMLAttributes<T> extends HTMLAttributes<T> {
+	interface PartialAreaHTMLAttributes<T extends EventTarget>
+		extends HTMLAttributes<T> {
 		alt?: Signalish<string | undefined>;
 		coords?: Signalish<string | undefined>;
 		download?: Signalish<any>;
@@ -1934,7 +1936,8 @@ export namespace JSXInternal {
 
 	type HTMLAttributeCrossOrigin = 'anonymous' | 'use-credentials';
 
-	interface PartialImgHTMLAttributes<T> extends HTMLAttributes<T> {
+	interface PartialImgHTMLAttributes<T extends EventTarget>
+		extends HTMLAttributes<T> {
 		crossorigin?: Signalish<HTMLAttributeCrossOrigin>;
 		crossOrigin?: Signalish<HTMLAttributeCrossOrigin>;
 		decoding?: Signalish<'async' | 'auto' | 'sync' | undefined>;
@@ -2004,7 +2007,8 @@ export namespace JSXInternal {
 	> &
 		ImgAriaRoles;
 
-	interface PartialInputHTMLAttributes<T> extends HTMLAttributes<T> {
+	interface PartialInputHTMLAttributes<T extends EventTarget>
+		extends HTMLAttributes<T> {
 		accept?: Signalish<string | undefined>;
 		alt?: Signalish<string | undefined>;
 		autocomplete?: Signalish<string | undefined>;
@@ -2494,7 +2498,8 @@ export namespace JSXInternal {
 		>;
 	}
 
-	interface PartialSelectHTMLAttributes<T> extends HTMLAttributes<T> {
+	interface PartialSelectHTMLAttributes<T extends EventTarget>
+		extends HTMLAttributes<T> {
 		autocomplete?: Signalish<string | undefined>;
 		autoComplete?: Signalish<string | undefined>;
 		defaultValue?: Signalish<string | number | undefined>;
