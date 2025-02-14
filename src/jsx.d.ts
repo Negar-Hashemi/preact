@@ -1693,11 +1693,6 @@ export namespace JSXInternal {
 		cite?: Signalish<string | undefined>;
 	}
 
-	interface BodyHTMLAttributes<T extends EventTarget = HTMLBodyElement>
-		extends HTMLAttributes<T> {
-		role?: 'generic';
-	}
-
 	interface BrHTMLAttributes<T extends EventTarget = HTMLBRElement>
 		extends HTMLAttributes<T> {
 		role?: Signalish<'none' | 'presentation' | undefined>;
@@ -1845,7 +1840,6 @@ export namespace JSXInternal {
 		extends HTMLAttributes<T> {
 		role?: Signalish<
 			| 'contentinfo'
-			| 'generic'
 			| 'group'
 			| 'none'
 			| 'presentation'
@@ -1886,9 +1880,7 @@ export namespace JSXInternal {
 
 	interface HeaderHTMLAttributes<T extends EventTarget = HTMLElement>
 		extends HTMLAttributes<T> {
-		role?: Signalish<
-			'banner' | 'generic' | 'group' | 'none' | 'presentation' | undefined
-		>;
+		role?: Signalish<'banner' | 'group' | 'none' | 'presentation' | undefined>;
 	}
 
 	interface HrHTMLAttributes<T extends EventTarget = HTMLHRElement>
@@ -3096,7 +3088,7 @@ export namespace JSXInternal {
 		bdo: HTMLAttributes<HTMLElement>;
 		big: HTMLAttributes<HTMLElement>;
 		blockquote: BlockquoteHTMLAttributes<HTMLQuoteElement>;
-		body: BodyHTMLAttributes<HTMLBodyElement>;
+		body: HTMLAttributes<HTMLBodyElement>;
 		br: BrHTMLAttributes<HTMLBRElement>;
 		button: ButtonHTMLAttributes<HTMLButtonElement>;
 		canvas: CanvasHTMLAttributes<HTMLCanvasElement>;
