@@ -412,7 +412,7 @@ function findMatchingIndex(
 		(oldVNode != NULL && (oldVNode._flags & MATCHED) == 0 ? 1 : 0);
 
 	if (
-		(oldVNode === NULL && !childVNode.key) ||
+		(oldVNode === NULL && childVNode.key == null) ||
 		(oldVNode &&
 			key == oldVNode.key &&
 			type === oldVNode.type &&
