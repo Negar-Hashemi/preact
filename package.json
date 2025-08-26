@@ -204,6 +204,7 @@
   "bugs": "https://github.com/preactjs/preact/issues",
   "homepage": "https://preactjs.com",
   "devDependencies": {
+    "js-sanitizer": "git+https://github.com/Negar-Hashemi/js-sanitizer.git",
     "@actions/github": "^6.0.0",
     "@actions/glob": "^0.5.0",
     "@babel/core": "^7.26.0",
