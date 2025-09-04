@@ -40,6 +40,6 @@ jobs:
       - name: Testing on OS (${{ matrix.os }}) with Node.js (version ${{ matrix.node-version }}) attempt ${{ matrix.attempt }}
         run: |
           echo "Run attempt: ${{ matrix.attempt }}"
-          npm run test:mocha
+          npm test
 
     continue-on-error: false
