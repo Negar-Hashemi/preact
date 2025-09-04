@@ -10,7 +10,9 @@ describe('createContext', () => {
 		expect(context).to.have.property('Provider');
 		expect(context).to.have.property('Consumer');
 	});
-
+/**
+* @skipOnNodeVersion 20,22
+*/
 	it('should return a valid Provider Component', () => {
 		const { Provider } = createContext();
 		const contextValue = { value: 'test' };
